@@ -1,0 +1,39 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "node build/index.js",
+    "build": "babel src --extensions .tsx --out-dir build",
+    "release": "ncc build build/index.js --out dist --minify && nexe dist/index.js --output dist/hello-react-ink.exe",
+    "eslint": "eslint src/**/*.tsx",
+    "tslint": "tslint --config tslint.json --project tsconfig.json"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/node": "^12.6.8",
+    "@types/react": "^16.8.23",
+    "@typescript-eslint/eslint-plugin": "^1.12.0",
+    "@typescript-eslint/parser": "^1.12.0",
+    "@zeit/ncc": "^0.20.4",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.2",
+    "ink": "^2.3.0",
+    "nexe": "^3.3.2",
+    "prettier": "^1.18.2",
+    "react": "^16.8.6",
+    "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "tslint-react": "^4.0.0",
+    "typescript": "^3.5.3"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  }
+}

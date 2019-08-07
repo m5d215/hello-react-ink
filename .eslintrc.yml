@@ -1,0 +1,36 @@
+settings:
+  react:
+    version: 'detect'
+
+parser: '@typescript-eslint/parser'
+
+parserOptions:
+  ecmaVersion: 2018
+  sourceType: module
+  ecmaFeatures:
+    jsx: true
+
+plugins:
+  - '@typescript-eslint'
+  - react
+
+extends:
+  - eslint:recommended
+  - plugin:react/recommended
+  - plugin:@typescript-eslint/eslint-recommended
+  - plugin:@typescript-eslint/recommended
+  - plugin:prettier/recommended
+  - prettier/@typescript-eslint
+
+rules:
+  react/prop-types: off
+  '@typescript-eslint/array-type':
+    - error
+    - array-simple
+  '@typescript-eslint/explicit-function-return-type':
+    - error
+    - allowExpressions: true
+      allowTypedFunctionExpressions: true
+  '@typescript-eslint/no-use-before-define':
+    - error
+    - functions: false
